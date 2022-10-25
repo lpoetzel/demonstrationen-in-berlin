@@ -39,7 +39,6 @@ img {
 }
 
 header {
-  background-color: gold;
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -101,4 +100,9 @@ header {
     padding-right: 0.5em;
     font-size: 3rem;
   }
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
 }

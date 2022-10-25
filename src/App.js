@@ -18,6 +18,8 @@ function App() {
 
   return (
     <>
+      <h1>Demonstrationen Suche für Berlin</h1>
+
       <Searchbar posts={posts} setSearchResults={setSearchResults} />
       <ListPage searchResults={searchResults} />
     </>
