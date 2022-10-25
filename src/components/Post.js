@@ -3,7 +3,7 @@ const Post = ({post}) => {
         <article>
             <h2>{post.datum}</h2>
             <p>{post.thema}</p>
-            <p>Post ID: {post.id}</p>
+            <p>Von:{post.von} bis:{post.bis}</p>
         </article>
     )
 }
