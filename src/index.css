@@ -22,7 +22,7 @@ body {
 
 p {
   color: whitesmoke;
-  margin-top: 0.5em;
+  margin-top: 2em;
 }
 
 article {
@@ -105,4 +105,12 @@ h1 {
   color: white;
   text-align: center;
   font-size: 3rem;
+}
+
+#datum {
+  float:left;
+}
+#von-bis {
+  padding-top: 0.35rem;
+  float: right;
 }
