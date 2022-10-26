@@ -4,12 +4,20 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Searchbar = ({ posts, setSearchResults }) => {
   const handleSubmit = (e) => e.preventDefault();
-    const handleSearchChange = (e) => {
-        if (!e.target.value) return setSearchResults(posts)
-        const resultsArray = posts.filter(post => 
-          post.datum.includes(e.target.value) || post.thema.toLowerCase().includes(e.target.value.toLowerCase()))
-        setSearchResults(resultsArray)
+  const handleSearchChange = (e) => {
+    if (!e.target.value) return setSearchResults(posts);
+    if (!isNaN(e.target.value)) {
+      const resultsArray = posts.filter((post) =>
+        post.datum.includes(e.target.value)
+      );
+      setSearchResults(resultsArray);
+    } else {
+      const resultsArray = posts.filter((post) =>
+        post.thema.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+      setSearchResults(resultsArray);
     }
+  };
 
   return (
     <header>
@@ -21,7 +29,7 @@ const Searchbar = ({ posts, setSearchResults }) => {
           onChange={handleSearchChange}
         />
         <button className="search__button">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
       </form>
     </header>
