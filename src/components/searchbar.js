@@ -27,6 +27,7 @@ const Searchbar = ({ posts, setSearchResults }) => {
           type="text"
           id="SEARCH"
           onChange={handleSearchChange}
+          placeholder="Suche nach Ort, Thema,Datum..."
         />
         <button className="search__button">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
