@@ -25,16 +25,25 @@ function App() {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={
+                <Home
+                  posts={posts}
+                  setSearchResults={setSearchResults}
+                  searchResults={searchResults}
+                />
+              }
+            />
             <Route path="/calendar" element={<Calendar />} />
             <Route path="/impressum" element={<Impressum />} />
           </Routes>
         </BrowserRouter>
       </div>
-      <h1>Demonstrationen Suche für Berlin</h1>
+      {/* <h1>Demonstrationen Suche für Berlin</h1> */}
 
-      <Searchbar posts={posts} setSearchResults={setSearchResults} />
-      <ListPage searchResults={searchResults} />
+      {/* <Searchbar posts={posts} setSearchResults={setSearchResults} />
+      <ListPage searchResults={searchResults} /> */}
     </>
   );
 }
