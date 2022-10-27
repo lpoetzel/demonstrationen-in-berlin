@@ -1,7 +1,5 @@
 import { getPosts } from "./api/axios";
 import { useState, useEffect } from "react";
-import Searchbar from "./components/searchbar";
-import ListPage from "./components/ListPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
