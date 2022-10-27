@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar = () => {
   return (
@@ -15,6 +16,12 @@ const NavBar = () => {
           <li>Impressum</li>
         </NavLink>
       </ul>
+      <button>
+        <FaTimes />
+      </button>
+      <button>
+        <FaBars />
+      </button>
     </div>
   );
 };

@@ -101,6 +101,7 @@ header {
     font-size: 3rem;
   }
 }
+
 h1 {
   color: white;
   text-align: center;
@@ -108,8 +109,9 @@ h1 {
 }
 
 #datum {
-  float:left;
+  float: left;
 }
+
 #von-bis {
   padding-top: 0.35rem;
   float: right;
