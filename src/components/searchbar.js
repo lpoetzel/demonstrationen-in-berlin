@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const today = new Date();
-console.log(today)
+console.log(today);
 const yyyy = today.getFullYear();
 let mm = today.getMonth() + 1; // Months start at 0!
 let dd = today.getDate();
@@ -57,4 +57,3 @@ const Searchbar = ({ posts, setSearchResults }) => {
 };
 
 export default Searchbar;
-
