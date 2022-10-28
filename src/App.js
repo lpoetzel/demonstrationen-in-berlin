@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
 import Impressum from "./pages/Impressum";
 import Header from "./components/Header";
-
+import { formattedToday } from "./components/searchbar";
 function App() {
   const [posts, setPosts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
@@ -13,7 +13,8 @@ function App() {
   useEffect(() => {
     getPosts().then((json) => {
       setPosts(json);
-      setSearchResults(json);
+      const filteredByDate = json.filter(ele => ele.datum.includes(formattedToday))
+      setSearchResults(filteredByDate);
     });
   }, []);
 
