@@ -140,7 +140,9 @@ h1 {
 .allCalendarCards {
   background-color: antiquewhite;
 }
+
 /* impressum */
+
 #lizenz {
   border-radius: 0px;
   display: inline-block;
@@ -152,6 +154,8 @@ h1 {
 .block-text {
   display: inline-block;
   padding: 2em;
+  padding-left: 1rem;
+  padding-right: 1em;
 }
 .envelope {
   color:#000;
@@ -160,4 +164,10 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   padding-top: 2em;
+}
+@media (min-width: 1000px) {
+  .block-text {
+    padding-left: 10rem;
+    padding-right: 10em;
+  }
 }
