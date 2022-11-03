@@ -45,6 +45,13 @@ header {
   align-items: center;
 }
 
+.navBar {
+  background-color: beige;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .search {
   width: 95%;
   border: 2px solid #000;
