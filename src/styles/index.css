@@ -171,3 +171,8 @@ h1 {
     padding-right: 10em;
   }
 }
+#no-matches {
+  text-align: center;
+  font-size: 2em;
+  margin-top: auto;
+}
