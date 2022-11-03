@@ -45,6 +45,14 @@ header {
   align-items: center;
 }
 
+.navBar a {
+  text-decoration: none;
+}
+
+.navBar img {
+  width: 3em;
+}
+
 .navBar {
   background-color: rgb(168, 191, 211);
   display: flex;
@@ -58,11 +66,12 @@ header {
   list-style: none;
   display: flex;
   gap: 1rem;
+  text-decoration: none;
 
 }
 
 .navBar li {
-  text-decoration: none;
+
   color: white;
 
 }
