@@ -7,18 +7,16 @@ import Impressum from "./pages/Impressum";
 import Header from "./components/Header";
 import { formattedToday } from "./components/searchbar";
 
-
-
 function App() {
   const [posts, setPosts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
- 
-
 
   useEffect(() => {
     getPosts().then((json) => {
       setPosts(json);
-      const filteredByDate = json.filter(ele => ele.datum.includes(formattedToday))
+      const filteredByDate = json.filter((ele) =>
+        ele.datum.includes(formattedToday)
+      );
       setSearchResults(filteredByDate);
     });
   }, []);
@@ -39,10 +37,7 @@ function App() {
                 />
               }
             />
-            <Route path="/calendar" element={<Calendar 
-            posts={posts}
-            
-            />} />
+            <Route path="/calendar" element={<Calendar posts={posts} />} />
             <Route path="/impressum" element={<Impressum />} />
           </Routes>
         </BrowserRouter>
