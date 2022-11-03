@@ -46,11 +46,31 @@ header {
 }
 
 .navBar {
-  background-color: beige;
+  background-color: rgb(168, 191, 211);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+
 }
+
+.navBar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+
+}
+
+.navBar li {
+  text-decoration: none;
+  color: white;
+
+}
+
+.navBar li:hover {
+  color: black;
+}
+
 
 .search {
   width: 95%;
