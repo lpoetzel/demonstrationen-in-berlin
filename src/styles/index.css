@@ -28,6 +28,7 @@ p {
 article {
   margin: 1em;
   padding: 1em;
+  padding-bottom: 2em;
   background-color: midnightblue;
   color: whitesmoke;
   border-radius: 15px;
@@ -152,7 +153,40 @@ h1 {
   padding-top: 0.35rem;
   float: right;
 }
+#no-matches {
+  text-align: center;
+  font-size: 2em;
+  margin-top: auto;
+}
+#maps-link {
+  float: right;
+  padding-bottom:10px;
+}
+#adress {
+  float: left;
+}
 
+#maps-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#maps-link:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
 /* Adding style to the calendar */
 
 .calendarCard {
@@ -165,8 +199,6 @@ h1 {
   border-radius: 10px;
   margin: 30px;
   padding: 30px;
-
-
 }
 
 .datumStyle {
@@ -177,11 +209,40 @@ h1 {
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
-
 }
 
+}
 .allCalendarCards {
-
   background-color: antiquewhite;
+}
 
+/* impressum */
+
+#lizenz {
+  border-radius: 0px;
+  display: inline-block;
+}
+.impressum-header {
+  text-align: center;
+  padding-top: 2em;
+}
+.block-text {
+  display: inline-block;
+  padding: 2em;
+  padding-left: 1rem;
+  padding-right: 1em;
+}
+.envelope {
+  color:#000;
+}
+.names {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2em;
+}
+@media (min-width: 1000px) {
+  .block-text {
+    padding-left: 10rem;
+    padding-right: 10em;
+  }
 }
