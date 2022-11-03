@@ -10,7 +10,7 @@ const ListPage = ({ searchResults }) => {
     results
   ) : (
     <article>
-      <p>No Matching Posts</p>
+      <p id="no-matches">Leider keine Treffer</p>
     </article>
   );
   return <main>{content}</main>;
