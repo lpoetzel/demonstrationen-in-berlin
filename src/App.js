@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
 import Impressum from "./pages/Impressum";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
 
 function App() {
   const [posts, setPosts] = useState([]);
