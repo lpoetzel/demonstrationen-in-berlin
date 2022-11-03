@@ -190,30 +190,48 @@ h1 {
 /* Adding style to the calendar */
 
 .calendarCard {
-  background-color: rgb(38, 75, 75);
   align-items: center;
   background-color: rgb(153, 153, 230);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  height: fit-content;
+
   width: 50%;
   height: 50%;
   border-radius: 10px;
   margin: 30px;
   padding: 30px;
+
 }
 
 .datumStyle {
   background-color: beige;
   width: auto;
+  height: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.allCalendarCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+}
+#year,
+#months {
+  width: 10%;
+  height: 10%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
   height: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
-}
-
-}
-.allCalendarCards {
-  background-color: antiquewhite;
 }
 
 /* impressum */

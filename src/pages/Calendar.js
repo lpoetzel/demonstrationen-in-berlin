@@ -2,8 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Popup from "../components/Popup";
 
-
-
 function Calendar({ posts }) {
   const [byMonth, setByMonths] = useState([]);
   const [month, setMonth] = useState("");
@@ -11,11 +9,14 @@ function Calendar({ posts }) {
   const [formattedDate, setFormattedDate] = useState(null);
   const [datesInMonth, setDatesInMonth] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [demoIndex, setDemoIndex] = useState(null);
 
-  const togglePopup = () => {
+  const togglePopup = (i) => {
+    setDemoIndex(i);
+
     setIsOpen(!isOpen);
   };
-
+  console.log(demoIndex);
   const yearsArr = [];
   for (let i = 22; i < 40; i++) {
     const anYear = `20${i}`;
@@ -28,20 +29,22 @@ function Calendar({ posts }) {
 
   useEffect(() => {
     console.log("setter working now");
-    setByMonths((prevPosts) => posts.filter((post) => post.datum.includes(formattedDate))
+    setByMonths((prevPosts) =>
+      posts.filter((post) => post.datum.includes(formattedDate))
     );
   }, [formattedDate, posts]);
 
   useEffect(() => {
-    setDatesInMonth((prevMonths) => byMonth
-      .map((ele) => ele.datum)
-      .filter((ele, idnx, arr) => arr.indexOf(ele) === idnx)
+    setDatesInMonth((prevMonths) =>
+      byMonth
+        .map((ele) => ele.datum)
+        .filter((ele, idnx, arr) => arr.indexOf(ele) === idnx)
     );
   }, [byMonth]);
 
   return (
     <div>
-      <h1>Calendar</h1>
+      <h1>Kalendar</h1>
 
       <label htmlFor="months">Select a months</label>
       <select
@@ -73,35 +76,38 @@ function Calendar({ posts }) {
         return (
           <div>
             <span>{ele}</span>
-            <span >
+            <span>
               <div className="allCalendarCards">
-              {byMonth
-                .filter((obj) => obj.datum === ele)
-                .map((ele) => {
-                  return (
-                    <div className="calendarCard">
-                      <input
-                        type="button"
-                        value="Click to Open"
-                        onClick={togglePopup} />
-                      <p>{ele.datum}</p>
-                      <p>{ele.thema.slice(0, 30) + "..."}</p>
-                      {isOpen && <Popup
-                        content={<>
-                          <p className="datumStyle">{ele.datum}</p>
-                          <p>
-                            {"Dauer:"} {ele.von + " " + ele.bis}
-                          </p>
-                          <p>{ele.thema}</p>
-                          <p>{ele.strasse_nr}</p>
-                          <p>{ele.plz}</p>
-                          <p>{ele.aufzugsstrecke}</p>
-                          
-                        </>}
-                        handleClose={togglePopup} />}
-                    </div>
-                  );
-                })}
+                {byMonth
+                  .filter((obj) => obj.datum === ele)
+                  .map((ele, index) => {
+                    return (
+                      <div className="calendarCard">
+                        <input
+                          type="button"
+                          value="Zum Öffnen/Schließen drücken"
+                          onClick={() => togglePopup(index)}
+                        />
+                        <p className="datumStyle">{ele.datum}</p>
+                        <p>{ele.thema.slice(0, 30) + "..."}</p>
+                        {isOpen && index === demoIndex && (
+                          <Popup
+                            content={
+                              <>
+                                <p>
+                                  {"Dauer:"} {ele.von + " " + ele.bis}
+                                </p>
+                                <p>{ele.thema}</p>
+                                <p>{ele.strasse_nr}</p>
+                                <p>{ele.plz}</p>
+                                <p>{ele.aufzugsstrecke}</p>
+                              </>
+                            }
+                          />
+                        )}
+                      </div>
+                    );
+                  })}
               </div>
             </span>
           </div>

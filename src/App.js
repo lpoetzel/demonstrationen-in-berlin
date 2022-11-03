@@ -8,6 +8,7 @@ import Impressum from "./pages/Impressum";
 import { formattedToday } from "./components/searchbar";
 import NavBar from "./components/NavBar";
 
+
 function App() {
   const [posts, setPosts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
