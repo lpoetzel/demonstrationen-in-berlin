@@ -46,6 +46,42 @@ header {
   align-items: center;
 }
 
+.navBar a {
+  text-decoration: none;
+}
+
+.navBar img {
+  width: 3em;
+}
+
+.navBar {
+  background-color: rgb(168, 191, 211);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+.navBar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+
+}
+
+.navBar li {
+
+  color: white;
+
+}
+
+.navBar li:hover {
+  color: black;
+}
+
+
 .search {
   width: 95%;
   border: 2px solid #000;
@@ -102,6 +138,7 @@ header {
     font-size: 3rem;
   }
 }
+
 h1 {
   color: white;
   text-align: center;
@@ -111,6 +148,7 @@ h1 {
 #datum {
   float: left;
 }
+
 #von-bis {
   padding-top: 0.35rem;
   float: right;
@@ -162,6 +200,7 @@ h1 {
   margin: 30px;
   padding: 30px;
 }
+
 .datumStyle {
   background-color: beige;
   width: auto;
@@ -170,6 +209,8 @@ h1 {
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
+}
+
 }
 .allCalendarCards {
   background-color: antiquewhite;

@@ -4,30 +4,30 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
 import Impressum from "./pages/Impressum";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import { formattedToday } from "./components/searchbar";
-
-
+import NavBar from "./components/NavBar";
 
 function App() {
   const [posts, setPosts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
- 
-
 
   useEffect(() => {
     getPosts().then((json) => {
       setPosts(json);
-      const filteredByDate = json.filter(ele => ele.datum.includes(formattedToday))
+      const filteredByDate = json.filter((ele) =>
+        ele.datum.includes(formattedToday)
+      );
       setSearchResults(filteredByDate);
     });
   }, []);
 
   return (
     <>
-      <div className="navBar">
+      <div>
         <BrowserRouter>
-          <Header />
+          {/* <Header /> */}
+          <NavBar />
           <Routes>
             <Route
               path="/"
@@ -39,10 +39,7 @@ function App() {
                 />
               }
             />
-            <Route path="/calendar" element={<Calendar 
-            posts={posts}
-            
-            />} />
+            <Route path="/calendar" element={<Calendar posts={posts} />} />
             <Route path="/impressum" element={<Impressum />} />
           </Routes>
         </BrowserRouter>
