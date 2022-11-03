@@ -122,13 +122,11 @@ h1 {
   align-items: center;
   background-color: rgb(153, 153, 230);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width:50%;
+  width: 50%;
   height: 50%;
   border-radius: 10px;
   margin: 30px;
   padding: 30px;
- 
-  
 }
 .datumStyle {
   background-color: beige;
@@ -138,10 +136,28 @@ h1 {
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  
 }
-.allCalendarCards{
-
- background-color: antiquewhite;
- 
+.allCalendarCards {
+  background-color: antiquewhite;
+}
+/* impressum */
+#lizenz {
+  border-radius: 0px;
+  display: inline-block;
+}
+.impressum-header {
+  text-align: center;
+  padding-top: 2em;
+}
+.block-text {
+  display: inline-block;
+  padding: 2em;
+}
+.envelope {
+  color:#000;
+}
+.names {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2em;
 }
