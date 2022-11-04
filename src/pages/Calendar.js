@@ -67,8 +67,7 @@ function Calendar({ posts }) {
         </select>
       </div>
       <div className="textyear">
-        <label htmlFor="year">Wählen Sie ein Jahr aus</label>
-
+        <label htmlFor="year">Wähle ein Jahr aus</label>
         <select name="year" id="year" onChange={(e) => setYear(e.target.value)}>
           {yearsArr.map((ele) => {
             return <option value={ele}>{ele}</option>;
