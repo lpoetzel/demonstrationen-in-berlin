@@ -222,10 +222,11 @@ h1 {
   padding-bottom: 5px;
 }
 .allCalendarCards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
   padding: 20px;
-}
+  }
 #year,
 #months {
   width: 10%;
