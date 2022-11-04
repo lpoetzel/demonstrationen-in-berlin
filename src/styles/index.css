@@ -162,19 +162,30 @@ h1 {
   margin-top: auto;
 }
 
-#maps-link {
-  float: right;
-  padding-bottom: 10px;
-}
-
 #adress {
   float: left;
 }
+#strecke-popup {
+  float: right;
+  position: relative;
+  bottom: 44px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+} 
 
 #maps-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  float: right;
+  position: relative;
+  bottom: 9px;
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
@@ -188,9 +199,10 @@ h1 {
   touch-action: manipulation;
 }
 
-#maps-link:focus {
-  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
-  outline: 0;
+#none {
+  width:0px ;
+  height: 0px;
+  opacity: 0;
 }
 
 /* Adding style to the calendar */
@@ -205,13 +217,6 @@ h1 {
   margin: 20px;
   border-radius: 10px;
   height: fit-content;
-
-  /* width: 50%;
-  height: 50%;
-  border-radius: 10px;
-  margin: 30px;
-  padding: 30px; */
-
 }
 
 .datumStyle {
@@ -223,9 +228,11 @@ h1 {
 }
 
 .allCalendarCards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
   padding: 20px;
+
 }
 
 #year,
@@ -235,11 +242,6 @@ h1 {
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
-  /* height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 50px;
-  padding-right: 50px; */
 }
 
 /* impressum */
