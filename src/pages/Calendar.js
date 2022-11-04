@@ -45,37 +45,40 @@ function Calendar({ posts }) {
   return (
     <div>
       <h1>Kalendar</h1>
+      <div className="textmonths">
+        <label htmlFor="months">Wähle einen Monat</label>
+        <select
+          name="months"
+          id="months"
+          onChange={(e) => setMonth(e.target.value)}
+        >
+          <option value="01">Januar</option>
+          <option value="02">Februar</option>
+          <option value="03">März</option>
+          <option value="04">April</option>
+          <option value="05">Mai</option>
+          <option value="06">Juni</option>
+          <option value="07">Juli</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">Oktober</option>
+          <option value="11">November</option>
+          <option value="12">Dezember</option>
+        </select>
+      </div>
+      <div className="textyear">
+        <label htmlFor="year">Wählen Sie ein Jahr aus</label>
 
-      <label htmlFor="months">Select a months</label>
-      <select
-        name="months"
-        id="months"
-        onChange={(e) => setMonth(e.target.value)}
-      >
-        <option value="01">Januar</option>
-        <option value="02">Februar</option>
-        <option value="03">März</option>
-        <option value="04">April</option>
-        <option value="05">Mai</option>
-        <option value="06">Juni</option>
-        <option value="07">Juli</option>
-        <option value="08">August</option>
-        <option value="09">September</option>
-        <option value="10">Oktober</option>
-        <option value="11">November</option>
-        <option value="12">Dezember</option>
-      </select>
-      <label htmlFor="year">Select an year</label>
-      <select name="year" id="year" onChange={(e) => setYear(e.target.value)}>
-        {yearsArr.map((ele) => {
-          return <option value={ele}>{ele}</option>;
-        })}
-      </select>
-
+        <select name="year" id="year" onChange={(e) => setYear(e.target.value)}>
+          {yearsArr.map((ele) => {
+            return <option value={ele}>{ele}</option>;
+          })}
+        </select>
+      </div>
       {datesInMonth.map((ele) => {
         return (
           <div>
-            <span>{ele}</span>
+            <span className="textmonths">{ele}</span>
             <span>
               <div className="allCalendarCards">
                 {byMonth
@@ -99,7 +102,9 @@ function Calendar({ posts }) {
                                 </p>
                                 <p>{ele.thema}</p>
                                 <p>{ele.strasse_nr}</p>
-                                <p>{ele.plz}</p>
+                                <p>
+                                  {ele.plz} {"Berlin"}
+                                </p>
                                 <p>{ele.aufzugsstrecke}</p>
                               </>
                             }

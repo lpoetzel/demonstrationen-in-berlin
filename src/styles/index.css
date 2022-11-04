@@ -60,7 +60,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-
 }
 
 .navBar ul {
@@ -68,19 +67,15 @@ header {
   display: flex;
   gap: 1rem;
   text-decoration: none;
-
 }
 
 .navBar li {
-
   color: white;
-
 }
 
 .navBar li:hover {
   color: black;
 }
-
 
 .search {
   width: 95%;
@@ -160,7 +155,7 @@ h1 {
 }
 #maps-link {
   float: right;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 #adress {
   float: left;
@@ -175,16 +170,19 @@ h1 {
   border: none;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
-   background-origin: border-box;
-  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, #4b91f7 0%, #367af6 100%);
+  background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
 #maps-link:focus {
-  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2),
+    0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
 }
 /* Adding style to the calendar */
@@ -199,13 +197,6 @@ h1 {
   margin: 20px;
   border-radius: 10px;
   height: fit-content;
-
-  width: 50%;
-  height: 50%;
-  border-radius: 10px;
-  margin: 30px;
-  padding: 30px;
-
 }
 
 .datumStyle {
@@ -216,9 +207,10 @@ h1 {
   padding-bottom: 5px;
 }
 .allCalendarCards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   padding: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 #year,
 #months {
@@ -227,11 +219,16 @@ h1 {
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
-  height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+}
+
+.textmonths {
   padding-left: 50px;
-  padding-right: 50px;
+  padding-top: 15px;
+}
+.textyear {
+  padding-left: 50px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 /* impressum */
@@ -251,7 +248,7 @@ h1 {
   padding-right: 1em;
 }
 .envelope {
-  color:#000;
+  color: #000;
 }
 .names {
   display: flex;
