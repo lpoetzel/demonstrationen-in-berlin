@@ -4,10 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
 import Impressum from "./pages/Impressum";
-// import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import { formattedToday } from "./components/searchbar";
-import NavBar from "./components/NavBar";
-
+// import NavBar from "./components/NavBar";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -27,8 +26,8 @@ function App() {
     <>
       <div>
         <BrowserRouter>
-          {/* <Header /> */}
-          <NavBar />
+          <Header />
+          {/* <NavBar /> */}
           <Routes>
             <Route
               path="/"
