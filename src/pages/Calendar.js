@@ -46,7 +46,7 @@ function Calendar({ posts }) {
     <div>
       <h1>Kalendar</h1>
 
-      <label htmlFor="months">Select a months</label>
+      <label htmlFor="months">Select a month</label>
       <select
         name="months"
         id="months"

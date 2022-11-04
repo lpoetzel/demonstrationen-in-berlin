@@ -7,7 +7,6 @@ import Impressum from "./pages/Impressum";
 // import Header from "./components/Header";
 import { formattedToday } from "./components/searchbar";
 import NavBar from "./components/NavBar";
-import {} from "react-burger-menu";
 
 function App() {
   const [posts, setPosts] = useState([]);
