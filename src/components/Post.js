@@ -31,7 +31,6 @@ const Post = ({ post }) => {
       <br />
       <h3 >{display}</h3>
       <button id="none"/>
-      {/* what else so it does pop out properly? */}
     </article>
   );
 };
