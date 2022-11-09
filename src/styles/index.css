@@ -16,12 +16,16 @@ html {
 }
 
 body {
-  background-color: beige;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Brandenburg_Tor_Berlin_greyscale.jpg/800px-Brandenburg_Tor_Berlin_greyscale.jpg?20110908143013");
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   font-family: "Nunito", sans-serif;
 }
 
 p {
-  color: rgb(221, 62, 62);
+  color: whitesmoke;
   margin-top: 2em;
   font-family: "Nunito", sans-serif;
 }
@@ -30,7 +34,7 @@ article {
   margin: 1em;
   padding: 1em;
   padding-bottom: 2em;
-  background-color: rgb(170, 175, 206);
+  background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
 }
@@ -56,7 +60,7 @@ header {
 }
 
 .navBar {
-  background-color: rgb(168, 191, 211);
+  background-color: #668586;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,9 +141,13 @@ header {
 }
 
 h1 {
-  color: black;
+  color: whitesmoke;
   text-align: center;
   font-size: 3rem;
+  margin: 1em;
+  background-color: #668586;
+  color: whitesmoke;
+  border-radius: 15px;
 }
 
 #datum {
@@ -168,14 +176,14 @@ h1 {
   border: none;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(180deg, #4b91f7 0%, #367af6 100%);
+  background-color: #201e1f;
   background-origin: border-box;
   box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
     inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-} 
+}
 
 #maps-link {
   float: right;
@@ -186,15 +194,16 @@ h1 {
   border: none;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(90deg, rgba(21, 21, 52, 0.43040966386554624) 100%, rgba(73, 111, 128, 0) 100%);
+  background-color: #201e1f;
   background-origin: border-box;
-  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 #none {
-  width:0px ;
+  width: 0px;
   height: 0px;
   opacity: 0;
 }
@@ -203,9 +212,8 @@ h1 {
 
 .calendarCard {
   align-items: center;
-  background-color: rgb(170, 175, 206);
+  background-color: #668586;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
@@ -214,8 +222,9 @@ h1 {
 }
 
 .datumStyle {
-  background-color: beige;
+  background-color: whitesmoke;
   width: auto;
+  color: black;
   height: auto;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -245,11 +254,19 @@ h1 {
   padding-left: 50px;
   padding-top: 5px;
   padding-bottom: 10px;
-
 }
 
 /* impressum */
 
+.impressum-block {
+  margin: 1em;
+  margin-bottom: 3rem;
+  padding: 1em;
+  padding-bottom: 2em;
+  background-color: #668586;
+  color: whitesmoke;
+  border-radius: 15px;
+}
 #lizenz {
   border-radius: 0px;
   display: inline-block;
@@ -265,8 +282,11 @@ h1 {
   padding: 2em;
   padding-left: 1rem;
   padding-right: 1em;
+  background-color: #668586;
 }
-
+.block-text a {
+  color: black;
+}
 .envelope {
   color: #000;
 }
