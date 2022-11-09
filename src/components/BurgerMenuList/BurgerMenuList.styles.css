@@ -34,4 +34,5 @@
 
 .menu li a:hover {
     color: gold;
+    transition: 0.5s;
 }

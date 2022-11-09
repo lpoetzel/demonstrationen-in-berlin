@@ -85,6 +85,7 @@ header {
 
 .navBar li:hover {
   color: black;
+  transition: 0.7s;
 }
 
 
