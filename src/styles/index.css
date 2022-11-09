@@ -173,7 +173,7 @@ h1 {
 #strecke-popup {
   float: right;
   position: relative;
-  bottom: 44px;
+  /* bottom: 44px; */
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
@@ -191,7 +191,6 @@ h1 {
 #maps-link {
   float: right;
   position: relative;
-  bottom: 9px;
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
