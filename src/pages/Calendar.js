@@ -41,6 +41,7 @@ function Calendar({ posts }) {
         .filter((ele, idnx, arr) => arr.indexOf(ele) === idnx)
     );
   }, [byMonth]);
+  console.log(byMonth);
 
   return (
     <div>
@@ -81,6 +82,7 @@ function Calendar({ posts }) {
             <span>
               <div className="allCalendarCards">
                 {byMonth
+                  .sort((a, b) => new Date(a.datum) - new Date(b.datum))
                   .filter((obj) => obj.datum === ele)
                   .map((ele, index) => {
                     return (
