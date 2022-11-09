@@ -16,7 +16,11 @@ html {
 }
 
 body {
-  background-color: beige;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Brandenburg_Tor_Berlin_greyscale.jpg/800px-Brandenburg_Tor_Berlin_greyscale.jpg?20110908143013");
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   font-family: "Nunito", sans-serif;
 }
 
