@@ -16,13 +16,15 @@ html {
 }
 
 body {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Brandenburg_Tor_Berlin_greyscale.jpg/800px-Brandenburg_Tor_Berlin_greyscale.jpg?20110908143013");
+  background-image: url("https://images.pexels.com/photos/5273642/pexels-photo-5273642.jpeg?auto=compress&cs=tinysrgb&w=1600");
   opacity: 0.9;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
   font-family: "Nunito", sans-serif;
   overflow-wrap: break-word;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 p {
@@ -147,7 +149,7 @@ header {
 h1 {
   color: whitesmoke;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2, 5rem;
   margin: 1em;
   background-color: #668586;
   color: whitesmoke;
