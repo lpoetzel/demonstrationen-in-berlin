@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Popup from "../components/Popup";
+import { yyyy } from "../components/searchbar";
 
 function Calendar({ posts }) {
   const [byMonth, setByMonths] = useState([]);
@@ -18,8 +19,8 @@ function Calendar({ posts }) {
   };
   console.log(demoIndex);
   const yearsArr = [];
-  for (let i = 22; i < 40; i++) {
-    const anYear = `20${i}`;
+  for (let i = yyyy; i < yyyy + 11; i++) {
+    const anYear = `${i}`;
     yearsArr.push(anYear);
   }
 
@@ -37,6 +38,7 @@ function Calendar({ posts }) {
   useEffect(() => {
     setDatesInMonth((prevMonths) =>
       byMonth
+        .sort((a, b) => new Date(a.datum) - new Date(b.datum))
         .map((ele) => ele.datum)
         .filter((ele, idnx, arr) => arr.indexOf(ele) === idnx)
     );
@@ -52,6 +54,7 @@ function Calendar({ posts }) {
           id="months"
           onChange={(e) => setMonth(e.target.value)}
         >
+          <option>-Monate-</option>
           <option value="01">Januar</option>
           <option value="02">Februar</option>
           <option value="03">März</option>
