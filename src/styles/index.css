@@ -16,13 +16,17 @@ html {
 }
 
 body {
-  background-color: beige;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Brandenburg_Tor_Berlin_greyscale.jpg/800px-Brandenburg_Tor_Berlin_greyscale.jpg?20110908143013");
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   font-family: "Nunito", sans-serif;
+  overflow-wrap: break-word;
 }
 
 p {
-  color: rgb(221, 62, 62);
-  margin-top: 2em;
+  color: whitesmoke;
   font-family: "Nunito", sans-serif;
 }
 
@@ -30,9 +34,12 @@ article {
   margin: 1em;
   padding: 1em;
   padding-bottom: 2em;
-  background-color: rgb(170, 175, 206);
+  background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+}
+article p {
+  margin-top: 2em;
 }
 
 img {
@@ -56,7 +63,7 @@ header {
 }
 
 .navBar {
-  background-color: rgb(168, 191, 211);
+  background-color: #668586;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,6 +84,7 @@ header {
 
 .navBar li:hover {
   color: black;
+  transition: 0.7s;
 }
 
 .search {
@@ -137,9 +145,13 @@ header {
 }
 
 h1 {
-  color: black;
+  color: whitesmoke;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin: 1em;
+  background-color: #668586;
+  color: whitesmoke;
+  border-radius: 15px;
 }
 
 #datum {
@@ -162,39 +174,56 @@ h1 {
 #strecke-popup {
   float: right;
   position: relative;
-  bottom: 44px;
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(180deg, #4b91f7 0%, #367af6 100%);
+  background-color: #201e1f;
   background-origin: border-box;
   box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
     inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-} 
+}
 
 #maps-link {
   float: right;
   position: relative;
-  bottom: 9px;
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(90deg, rgba(21, 21, 52, 0.43040966386554624) 100%, rgba(73, 111, 128, 0) 100%);
+  background-color: #201e1f;
   background-origin: border-box;
-  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#zeigen-button {
+  float: right;
+  position: relative;
+  bottom: -5px;
+  right: 26px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  background-color: #201e1f;
+  background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 #none {
-  width:0px ;
+  width: 0px;
   height: 0px;
   opacity: 0;
 }
@@ -203,53 +232,84 @@ h1 {
 
 .calendarCard {
   align-items: center;
-  background-color: rgb(170, 175, 206);
+  background-color: #668586;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px;
   border-radius: 10px;
   height: fit-content;
+  width: 10rem;
+  overflow-wrap: break-word;
 }
 
 .datumStyle {
-  background-color: beige;
-  width: auto;
+  background-color: whitesmoke;
+  width: 5.5rem;
+  color: black;
   height: auto;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin: 0px;
+  margin-left: 1.5rem;
 }
 
 .allCalendarCards {
   display: flex;
-  padding: 20px;
-  justify-content: space-around;
+  padding: 10px;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 #year,
 #months {
-  width: 10%;
-  height: 10%;
+  width: fit-content;
+  height: fit-content;
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
+  margin-left: 1rem;
 }
 
 .textmonths {
-  padding-left: 50px;
-  padding-top: 15px;
+  margin-left: 1.75rem;
+  padding: 0.4em;
+  width: fit-content;
+  margin-top: 1rem;
+  background-color: #668586;
+  color: whitesmoke;
+  border-radius: 15px;
 }
 .textyear {
-  padding-left: 50px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-
+  margin-left: 1.75rem;
+  padding: 0.4em;
+  width: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #668586;
+  color: whitesmoke;
+  border-radius: 15px;
 }
-
+.date-above-calender {
+  background-color: #668586;
+  color: whitesmoke;
+  border-radius: 15px;
+  margin: 0.5em;
+  margin-left: 1.75rem;
+  padding: 0.3em;
+  font-size: 1.5rem;
+}
 /* impressum */
 
+.impressum-block {
+  margin: 1em;
+  margin-bottom: 3rem;
+  padding: 1em;
+  padding-bottom: 2em;
+  background-color: #668586;
+  color: whitesmoke;
+  border-radius: 15px;
+}
 #lizenz {
   border-radius: 0px;
   display: inline-block;
@@ -265,8 +325,11 @@ h1 {
   padding: 2em;
   padding-left: 1rem;
   padding-right: 1em;
+  background-color: #668586;
 }
-
+.block-text a {
+  color: black;
+}
 .envelope {
   color: #000;
 }

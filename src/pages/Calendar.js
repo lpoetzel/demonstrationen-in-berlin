@@ -46,7 +46,7 @@ function Calendar({ posts }) {
     <div>
       <h1>Kalendar</h1>
       <div className="textmonths">
-        <label htmlFor="months">Wähle einen Monat</label>
+        <label htmlFor="months">Wähle einen Monat: </label>
         <select
           name="months"
           id="months"
@@ -67,7 +67,7 @@ function Calendar({ posts }) {
         </select>
       </div>
       <div className="textyear">
-        <label htmlFor="year">Wähle ein Jahr aus</label>
+        <label htmlFor="year">Wähle ein Jahr: </label>
         <select name="year" id="year" onChange={(e) => setYear(e.target.value)}>
           {yearsArr.map((ele) => {
             return <option value={ele}>{ele}</option>;
@@ -77,7 +77,7 @@ function Calendar({ posts }) {
       {datesInMonth.map((ele) => {
         return (
           <div>
-            <span className="textmonths">{ele}</span>
+            <span className="textmonths date-above-calender">{ele}</span>
             <span>
               <div className="allCalendarCards">
                 {byMonth
@@ -85,11 +85,6 @@ function Calendar({ posts }) {
                   .map((ele, index) => {
                     return (
                       <div className="calendarCard">
-                        <input
-                          type="button"
-                          value="Zum Öffnen/Schließen drücken"
-                          onClick={() => togglePopup(index)}
-                        />
                         <p className="datumStyle">{ele.datum}</p>
                         <p>{ele.thema.slice(0, 30) + "..."}</p>
                         {isOpen && index === demoIndex && (
@@ -109,6 +104,12 @@ function Calendar({ posts }) {
                             }
                           />
                         )}
+                        <input
+                          id="zeigen-button"
+                          type="button"
+                          value="Alles zeigen"
+                          onClick={() => togglePopup(index)}
+                        />
                       </div>
                     );
                   })}
