@@ -10,6 +10,11 @@ let dd = today.getDate();
 if (dd < 10) dd = "0" + dd;
 if (mm < 10) mm = "0" + mm;
 
+function isValidDate(value) {
+  var dateWrapper = new Date(value);
+  return !isNaN(dateWrapper.getDate());
+}
+
 export const formattedToday = dd + "." + mm + "." + yyyy;
 const Searchbar = ({ posts, setSearchResults }) => {
   const handleSubmit = (e) => e.preventDefault();
@@ -19,7 +24,10 @@ const Searchbar = ({ posts, setSearchResults }) => {
         posts.filter((post) => post.datum.includes(formattedToday))
       );
     }
-    if (!isNaN(e.target.value)) {
+    if (
+      !isNaN(e.target.value) ||
+      isValidDate(e.target.value.replaceAll(".", " "))
+    ) {
       const resultsArray = posts.filter(
         (post) =>
           post.datum.includes(e.target.value) ||
