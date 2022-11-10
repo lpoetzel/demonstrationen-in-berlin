@@ -2,12 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Popup from "../components/Popup";
 import { yyyy } from "../components/searchbar";
+import { mm } from "../components/searchbar";
 
 function Calendar({ posts }) {
   const [byMonth, setByMonths] = useState([]);
-  const [month, setMonth] = useState("");
-  const [year, setYear] = useState("");
-  const [formattedDate, setFormattedDate] = useState(null);
+  const [month, setMonth] = useState(mm);
+  const [year, setYear] = useState(yyyy);
+  const [formattedDate, setFormattedDate] = useState(month + year);
   const [datesInMonth, setDatesInMonth] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [demoIndex, setDemoIndex] = useState(null);
@@ -17,7 +18,6 @@ function Calendar({ posts }) {
 
     setIsOpen(!isOpen);
   };
-  console.log(demoIndex);
   const yearsArr = [];
   for (let i = yyyy; i < yyyy + 11; i++) {
     const anYear = `${i}`;
@@ -29,7 +29,6 @@ function Calendar({ posts }) {
   }, [month, year]);
 
   useEffect(() => {
-    console.log("setter working now");
     setByMonths((prevPosts) =>
       posts.filter((post) => post.datum.includes(formattedDate))
     );
