@@ -19,7 +19,7 @@ const Searchbar = ({ posts, setSearchResults }) => {
         posts.filter((post) => post.datum.includes(formattedToday))
       );
     }
-    if (!isNaN(e.target.value) || typeof Date) {
+    if (!isNaN(e.target.value)) {
       const resultsArray = posts.filter(
         (post) =>
           post.datum.includes(e.target.value) ||
