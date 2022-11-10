@@ -40,6 +40,7 @@ article {
   color: whitesmoke;
   border-radius: 15px;
 }
+
 article p {
   margin-top: 2em;
 }
@@ -170,9 +171,11 @@ h1 {
   font-size: 2em;
   margin-top: auto;
 }
+
 #adress {
   float: left;
 }
+
 #strecke-popup {
   float: right;
   position: relative;
@@ -206,6 +209,7 @@ h1 {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
 #zeigen-button {
   float: right;
   position: relative;
@@ -224,6 +228,16 @@ h1 {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
+#strecke-popup:hover,
+#maps-link:hover,
+#zeigen-button:hover {
+  background-color: black;
+  transform: scale(1.100);
+  transition: 200ms transform ease-in;
+  cursor: pointer;
+}
+
 #none {
   width: 0px;
   height: 0px;
@@ -244,6 +258,7 @@ h1 {
   width: 10rem;
   overflow-wrap: break-word;
 }
+
 
 .datumStyle {
   background-color: whitesmoke;
@@ -282,6 +297,7 @@ h1 {
   color: whitesmoke;
   border-radius: 15px;
 }
+
 .textyear {
   margin-left: 1.75rem;
   padding: 0.4em;
@@ -292,6 +308,7 @@ h1 {
   color: whitesmoke;
   border-radius: 15px;
 }
+
 .date-above-calender {
   background-color: #668586;
   color: whitesmoke;
@@ -301,6 +318,7 @@ h1 {
   padding: 0.3em;
   font-size: 1.5rem;
 }
+
 /* impressum */
 
 .impressum-block {
@@ -312,6 +330,7 @@ h1 {
   color: whitesmoke;
   border-radius: 15px;
 }
+
 #lizenz {
   border-radius: 0px;
   display: inline-block;
@@ -329,9 +348,11 @@ h1 {
   padding-right: 1em;
   background-color: #668586;
 }
+
 .block-text a {
   color: black;
 }
+
 .envelope {
   color: #000;
 }
