@@ -4,18 +4,19 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const today = new Date();
 export const yyyy = today.getFullYear();
-let mm = today.getMonth() + 1; // Months start at 0!
+export let mm = today.getMonth() + 1; // Months start at 0!
 let dd = today.getDate();
 
 if (dd < 10) dd = "0" + dd;
 if (mm < 10) mm = "0" + mm;
+
+export const formattedToday = dd + "." + mm + "." + yyyy;
 
 function isValidDate(value) {
   var dateWrapper = new Date(value);
   return !isNaN(dateWrapper.getDate());
 }
 
-export const formattedToday = dd + "." + mm + "." + yyyy;
 const Searchbar = ({ posts, setSearchResults }) => {
   const handleSubmit = (e) => e.preventDefault();
   const handleSearchChange = (e) => {
