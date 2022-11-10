@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Popup from "../components/Popup";
 import { yyyy } from "../components/searchbar";
 import { mm } from "../components/searchbar";
-
+import { formattedToday } from "../components/searchbar";
 function Calendar({ posts }) {
   const [byMonth, setByMonths] = useState([]);
   const [month, setMonth] = useState(mm);
@@ -30,7 +30,15 @@ function Calendar({ posts }) {
 
   useEffect(() => {
     setByMonths((prevPosts) =>
-      posts.filter((post) => post.datum.includes(formattedDate))
+      posts
+        .filter((post) => post.datum.includes(formattedDate))
+        .filter((post) => {
+          if (post.datum.slice(3, 5) == mm) {
+            return post.datum >= formattedToday;
+          } else {
+            return post;
+          }
+        })
     );
   }, [formattedDate, posts]);
 
