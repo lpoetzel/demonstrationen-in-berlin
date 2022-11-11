@@ -87,7 +87,7 @@ function Calendar({ posts }) {
       {datesInMonth.map((ele) => {
         return (
           <div>
-            <span className="textmonths date-above-calender">{ele}</span>
+            <span className="date-above-calender">{ele}</span>
             <span>
               <div className="allCalendarCards">
                 {byMonth
@@ -96,21 +96,28 @@ function Calendar({ posts }) {
                   .map((ele, index) => {
                     return (
                       <div className="calendarCard">
-                        <p className="datumStyle">{ele.datum}</p>
+                        <p className="datumStyle">
+                          {ele.von}-{ele.bis}
+                        </p>
                         <p>{ele.thema.slice(0, 30) + "..."}</p>
                         {isOpen && index === demoIndex && (
                           <Popup
                             content={
                               <>
+                                <p>{ele.thema.slice(30)}</p>
+                                <hr />
                                 <p>
-                                  {"Dauer:"} {ele.von + " " + ele.bis}
+                                  <strong>{ele.strasse_nr}</strong>
                                 </p>
-                                <p>{ele.thema}</p>
-                                <p>{ele.strasse_nr}</p>
+
                                 <p>
-                                  {ele.plz} {"Berlin"}
+                                  <strong>
+                                    {ele.plz} {"Berlin"}
+                                  </strong>
                                 </p>
-                                <p>{ele.aufzugsstrecke}</p>
+                                <p>
+                                  <strong>{ele.aufzugsstrecke}</strong>
+                                </p>
                               </>
                             }
                           />
