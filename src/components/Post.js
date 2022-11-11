@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+
 const Post = ({ post }) => {
+  const copy = async () => {
+    await navigator.clipboard.writeText(
+      `${post.datum} ${post.von}-${post.bis} ${post.thema} ${tweetDisplay}`
+    );
+    alert("Text copied");
+  };
   const [show, setShow] = useState(false);
   const street = `${post.strasse_nr}`;
   const tweetDisplay = street.length
@@ -46,7 +53,7 @@ const Post = ({ post }) => {
       <br />
       <h3>{display}</h3>
       <a
-        class="twitter-share-button"
+        id="twitter-button"
         href={`https://twitter.com/intent/tweet?text=${post.datum} ${post.von}-${post.bis} %0a ${post.thema} %0a ${tweetDisplay}`}
         data-size="large"
         target="_blank"
@@ -54,7 +61,9 @@ const Post = ({ post }) => {
       >
         <FontAwesomeIcon icon={faTwitter} />
       </a>
-      <button id="none" />
+      <button id="copy-button" onClick={copy}>
+        Kopieren
+      </button>
     </article>
   );
 };
