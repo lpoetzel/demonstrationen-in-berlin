@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const Heading = styled.h1`
-  text-align: center;
-  color: green;
-`;
-
 export const Content = styled.div`
   overflowy: scroll;
   height: 2500px;
@@ -19,4 +14,9 @@ export const Button = styled.div`
   z-index: 1;
   cursor: pointer;
   color: rgb(245, 245, 245);
+
+  @media (max-width: 576px) {
+    font-size: 2rem;
+    margin-right: 5px;
+  } ;
 `;
