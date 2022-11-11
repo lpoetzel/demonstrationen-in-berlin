@@ -7,9 +7,10 @@ const Post = ({ post }) => {
     await navigator.clipboard.writeText(
       `${post.datum} ${post.von}-${post.bis} ${post.thema} ${tweetDisplay}`
     );
-    alert("Text copied");
+    setButtonText("Kopiert!");
   };
   const [show, setShow] = useState(false);
+  const [buttonText, setButtonText] = useState("Kopieren");
   const street = `${post.strasse_nr}`;
   const tweetDisplay = street.length
     ? `${street} , ${post.plz} Berlin `
@@ -62,7 +63,7 @@ const Post = ({ post }) => {
         <FontAwesomeIcon icon={faTwitter} />
       </a>
       <button id="copy-button" onClick={copy}>
-        Kopieren
+        {buttonText}
       </button>
     </article>
   );
