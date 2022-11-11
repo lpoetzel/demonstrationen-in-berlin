@@ -91,6 +91,7 @@ function Calendar({ posts }) {
             <span>
               <div className="allCalendarCards">
                 {byMonth
+                  .sort((a, b) => new Date(a.datum) - new Date(b.datum))
                   .filter((obj) => obj.datum === ele)
                   .map((ele, index) => {
                     return (
