@@ -211,10 +211,9 @@ h1 {
 }
 
 #zeigen-button {
-  float: right;
-  position: relative;
-  bottom: -5px;
-  right: 26px;
+  justify-content: flex-end;
+  display: flex;
+
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
@@ -268,19 +267,22 @@ h1 {
   margin: 10px;
   border-radius: 10px;
   height: fit-content;
+  min-height: 9rem;
   width: 10rem;
   overflow-wrap: break-word;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
 }
 
 .datumStyle {
   background-color: whitesmoke;
-  width: 5.5rem;
+  width: fit-content;
   color: black;
   height: auto;
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0px;
-  margin-left: 1.5rem;
 }
 
 .allCalendarCards {
@@ -330,7 +332,9 @@ h1 {
   padding: 0.3em;
   font-size: 1.5rem;
 }
-
+hr {
+  color: whitesmoke;
+}
 /* impressum */
 
 .impressum-block {
