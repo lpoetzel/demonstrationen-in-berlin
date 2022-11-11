@@ -87,7 +87,7 @@ function Calendar({ posts }) {
       {datesInMonth.map((ele) => {
         return (
           <div>
-            <span className="textmonths date-above-calender">{ele}</span>
+            <span className="date-above-calender">{ele}</span>
             <span>
               <div className="allCalendarCards">
                 {byMonth

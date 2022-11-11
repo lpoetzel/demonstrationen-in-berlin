@@ -303,7 +303,6 @@ h1 {
 }
 
 .textmonths {
-  margin-left: 1.75rem;
   padding: 0.4em;
   width: fit-content;
   margin-top: 1rem;
@@ -313,7 +312,6 @@ h1 {
 }
 
 .textyear {
-  margin-left: 1.75rem;
   padding: 0.4em;
   width: fit-content;
   margin-top: 1rem;
@@ -324,13 +322,15 @@ h1 {
 }
 
 .date-above-calender {
+  margin: 1rem 0;
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
-  margin: 0.5em;
-  margin-left: 1.75rem;
   padding: 0.3em;
   font-size: 1.5rem;
+  display: inline-block;
+  width: 100%;
+  text-align: -moz-center;
 }
 hr {
   color: whitesmoke;
