@@ -336,7 +336,8 @@ h1 {
   padding: 0.3em;
   font-size: 1.3rem;
   display: inline-block;
-  width: 100%;
+  width: 95%;
+  margin-left: 2rem;
   text-align: -moz-center;
 }
 hr {
