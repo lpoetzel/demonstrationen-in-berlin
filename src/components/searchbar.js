@@ -29,6 +29,7 @@ const Searchbar = ({ posts, setSearchResults }) => {
       !isNaN(e.target.value) ||
       isValidDate(e.target.value.replaceAll(".", " "))
     ) {
+      console.log(e.target.value);
       const resultsArray = posts.filter(
         (post) =>
           post.datum.includes(e.target.value) ||

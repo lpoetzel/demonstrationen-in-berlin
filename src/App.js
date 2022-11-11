@@ -6,6 +6,9 @@ import Calendar from "./pages/Calendar";
 import Impressum from "./pages/Impressum";
 import Header from "./components/Header/Header";
 import { formattedToday } from "./components/searchbar";
+import { Fragment } from "react";
+import ScrollButton from "./components/ScrollButton";
+import { Content, Heading } from "./components/Styles";
 // import NavBar from "./components/NavBar";
 
 function App() {
@@ -43,6 +46,7 @@ function App() {
             <Route path="/impressum" element={<Impressum />} />
           </Routes>
         </BrowserRouter>
+        <ScrollButton />
       </div>
     </>
   );
