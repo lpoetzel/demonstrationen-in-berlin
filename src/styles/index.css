@@ -12,7 +12,7 @@ button {
 }
 
 html {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 body {
@@ -25,12 +25,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  margin: 0;
+}
+
+.wrapper {
+  width: auto;
+  max-width: 51.25rem;
+  margin: 0 auto;
+  border: 0px solid;
+  position: relative;
+  z-index: auto;
+  background-color: rgba(245, 245, 245, 0.25);
 }
 
 p {
   color: whitesmoke;
   font-family: "Nunito", sans-serif;
   overflow-wrap: anywhere;
+}
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 article {
@@ -40,6 +55,7 @@ article {
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 article p {
@@ -73,6 +89,7 @@ header {
   align-items: center;
   padding: 1rem;
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .navBar ul {
@@ -99,6 +116,7 @@ header {
   font-size: 1rem;
   display: flex;
   flex-flow: row nowrap;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .search:focus-within {
@@ -128,6 +146,7 @@ header {
 
 @media (min-width: 576px) {
   .search {
+    height: 10vh;
     font-size: 1.5rem;
   }
 
@@ -139,6 +158,7 @@ header {
 @media (min-width: 800px) {
   .search {
     width: 75%;
+    height: 10vh;
     font-size: 2rem;
   }
 
@@ -151,11 +171,12 @@ header {
 h1 {
   color: whitesmoke;
   text-align: center;
-  font-size: 2, 5rem;
+  font-size: 1.9rem;
   margin: 1em;
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 #datum {
@@ -274,6 +295,7 @@ h1 {
   justify-content: space-between;
   flex-direction: column;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .datumStyle {
@@ -284,6 +306,7 @@ h1 {
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .allCalendarCards {
@@ -316,6 +339,7 @@ h1 {
   color: whitesmoke;
   border-radius: 15px;
   height: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .textyear {
@@ -326,6 +350,7 @@ h1 {
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .date-above-calender {
@@ -339,6 +364,7 @@ h1 {
   width: 95%;
   margin-left: 2rem;
   text-align: -moz-center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 hr {
   color: whitesmoke;
@@ -353,6 +379,7 @@ hr {
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 #lizenz {
