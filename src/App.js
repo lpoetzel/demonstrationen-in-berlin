@@ -6,10 +6,7 @@ import Calendar from "./pages/Calendar";
 import Impressum from "./pages/Impressum";
 import Header from "./components/Header/Header";
 import { formattedToday } from "./components/searchbar";
-import { Fragment } from "react";
-import ScrollButton from "./components/ScroolButton/ScrollButton";
-
-// import NavBar from "./components/NavBar";
+import ScrollButton from "./components/ScrollButton/ScrollButton";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -27,10 +24,9 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="wrapper">
         <BrowserRouter>
           <Header />
-          {/* <NavBar /> */}
           <Routes>
             <Route
               path="/"

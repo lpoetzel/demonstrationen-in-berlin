@@ -43,7 +43,7 @@ function Calendar({ posts }) {
   }, [formattedDate, posts]);
 
   useEffect(() => {
-    setDatesInMonth((prevMonths) =>
+    setDatesInMonth((_prevMonths) =>
       byMonth
         .sort((a, b) => new Date(a.datum) - new Date(b.datum))
         .map((ele) => ele.datum)
