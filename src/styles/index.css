@@ -354,14 +354,14 @@ h1 {
 }
 
 .date-above-calender {
-  margin: 1rem 0;
+  margin: 1rem 1rem;
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
   padding: 0.3em;
   font-size: 1.3rem;
   display: inline-block;
-  width: 95%;
+  width: 90%;
   margin-left: 2rem;
   text-align: -moz-center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
