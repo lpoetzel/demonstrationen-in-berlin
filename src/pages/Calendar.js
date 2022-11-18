@@ -33,7 +33,7 @@ function Calendar({ posts }) {
       posts
         .filter((post) => post.datum.includes(formattedDate))
         .filter((post) => {
-          if (post.datum.slice(3, 5) == mm) {
+          if (post.datum.slice(3, 5) === String(mm)) {
             return post.datum >= formattedToday;
           } else {
             return post;
