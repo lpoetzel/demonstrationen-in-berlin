@@ -84,15 +84,19 @@ function Calendar({ posts }) {
             id="year"
             onChange={(e) => setYear(e.target.value)}
           >
-            {yearsArr.map((ele) => {
-              return <option value={ele}>{ele}</option>;
+            {yearsArr.map((ele, i) => {
+              return (
+                <option key={i} value={ele}>
+                  {ele}
+                </option>
+              );
             })}
           </select>
         </div>
       </div>
-      {datesInMonth.map((ele) => {
+      {datesInMonth.map((ele, i) => {
         return (
-          <div>
+          <div key={i}>
             <span className="date-above-calender">{ele}</span>
             <span>
               <div className="allCalendarCards">
@@ -101,7 +105,7 @@ function Calendar({ posts }) {
                   .filter((obj) => obj.datum === ele)
                   .map((ele, index) => {
                     return (
-                      <div className="calendarCard">
+                      <div key={index} className="calendarCard">
                         <p className="datumStyle">
                           {ele.von}-{ele.bis}
                         </p>
