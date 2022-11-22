@@ -2,12 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Popup from "../components/Popup";
 import { yyyy } from "../components/searchbar";
-
+import { mm } from "../components/searchbar";
+import { formattedToday } from "../components/searchbar";
 function Calendar({ posts }) {
   const [byMonth, setByMonths] = useState([]);
-  const [month, setMonth] = useState("");
-  const [year, setYear] = useState("");
-  const [formattedDate, setFormattedDate] = useState(null);
+  const [month, setMonth] = useState(mm);
+  const [year, setYear] = useState(yyyy);
+  const [formattedDate, setFormattedDate] = useState(month + year);
   const [datesInMonth, setDatesInMonth] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [demoIndex, setDemoIndex] = useState(null);
@@ -17,7 +18,6 @@ function Calendar({ posts }) {
 
     setIsOpen(!isOpen);
   };
-  console.log(demoIndex);
   const yearsArr = [];
   for (let i = yyyy; i < yyyy + 11; i++) {
     const anYear = `${i}`;
@@ -29,14 +29,21 @@ function Calendar({ posts }) {
   }, [month, year]);
 
   useEffect(() => {
-    console.log("setter working now");
     setByMonths((prevPosts) =>
-      posts.filter((post) => post.datum.includes(formattedDate))
+      posts
+        .filter((post) => post.datum.includes(formattedDate))
+        .filter((post) => {
+          if (post.datum.slice(3, 5) === String(mm)) {
+            return post.datum >= formattedToday;
+          } else {
+            return post;
+          }
+        })
     );
   }, [formattedDate, posts]);
 
   useEffect(() => {
-    setDatesInMonth((prevMonths) =>
+    setDatesInMonth((_prevMonths) =>
       byMonth
         .sort((a, b) => new Date(a.datum) - new Date(b.datum))
         .map((ele) => ele.datum)
@@ -47,62 +54,80 @@ function Calendar({ posts }) {
   return (
     <div>
       <h1>Kalendar</h1>
-      <div className="textmonths">
-        <label htmlFor="months">Wähle einen Monat: </label>
-        <select
-          name="months"
-          id="months"
-          onChange={(e) => setMonth(e.target.value)}
-        >
-          <option>-Monate-</option>
-          <option value="01">Januar</option>
-          <option value="02">Februar</option>
-          <option value="03">März</option>
-          <option value="04">April</option>
-          <option value="05">Mai</option>
-          <option value="06">Juni</option>
-          <option value="07">Juli</option>
-          <option value="08">August</option>
-          <option value="09">September</option>
-          <option value="10">Oktober</option>
-          <option value="11">November</option>
-          <option value="12">Dezember</option>
-        </select>
+      <div className="month-year">
+        <div className="textmonths">
+          <label htmlFor="months">Wähle einen Monat: </label>
+          <select
+            name="months"
+            id="months"
+            onChange={(e) => setMonth(e.target.value)}
+          >
+            <option>-Monate-</option>
+            <option value="01">Januar</option>
+            <option value="02">Februar</option>
+            <option value="03">März</option>
+            <option value="04">April</option>
+            <option value="05">Mai</option>
+            <option value="06">Juni</option>
+            <option value="07">Juli</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">Oktober</option>
+            <option value="11">November</option>
+            <option value="12">Dezember</option>
+          </select>
+        </div>
+        <div className="textyear">
+          <label htmlFor="year">Wähle ein Jahr: </label>
+          <select
+            name="year"
+            id="year"
+            onChange={(e) => setYear(e.target.value)}
+          >
+            {yearsArr.map((ele, i) => {
+              return (
+                <option key={i} value={ele}>
+                  {ele}
+                </option>
+              );
+            })}
+          </select>
+        </div>
       </div>
-      <div className="textyear">
-        <label htmlFor="year">Wähle ein Jahr: </label>
-        <select name="year" id="year" onChange={(e) => setYear(e.target.value)}>
-          {yearsArr.map((ele) => {
-            return <option value={ele}>{ele}</option>;
-          })}
-        </select>
-      </div>
-      {datesInMonth.map((ele) => {
+      {datesInMonth.map((ele, i) => {
         return (
-          <div>
-            <span className="textmonths date-above-calender">{ele}</span>
+          <div key={i}>
+            <span className="date-above-calender">{ele}</span>
             <span>
               <div className="allCalendarCards">
                 {byMonth
+                  .sort((a, b) => new Date(a.datum) - new Date(b.datum))
                   .filter((obj) => obj.datum === ele)
                   .map((ele, index) => {
                     return (
-                      <div className="calendarCard">
-                        <p className="datumStyle">{ele.datum}</p>
+                      <div key={index} className="calendarCard">
+                        <p className="datumStyle">
+                          {ele.von}-{ele.bis}
+                        </p>
                         <p>{ele.thema.slice(0, 30) + "..."}</p>
                         {isOpen && index === demoIndex && (
                           <Popup
                             content={
                               <>
+                                <p>{ele.thema.slice(30)}</p>
+                                <hr />
                                 <p>
-                                  {"Dauer:"} {ele.von + " " + ele.bis}
+                                  <strong>{ele.strasse_nr}</strong>
                                 </p>
-                                <p>{ele.thema}</p>
-                                <p>{ele.strasse_nr}</p>
+
                                 <p>
-                                  {ele.plz} {"Berlin"}
+                                  <strong>
+                                    {ele.plz} {"Berlin"}
+                                  </strong>
                                 </p>
-                                <p>{ele.aufzugsstrecke}</p>
+                                <p>
+                                  <strong>{ele.aufzugsstrecke}</strong>
+                                </p>
                               </>
                             }
                           />

@@ -12,7 +12,7 @@ button {
 }
 
 html {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 body {
@@ -25,11 +25,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  margin: 0;
+}
+
+.wrapper {
+  width: auto;
+  max-width: 51.25rem;
+  margin: 0 auto;
+  border: 0px solid;
+  position: relative;
+  z-index: auto;
+  background-color: rgba(245, 245, 245, 0.25);
 }
 
 p {
   color: whitesmoke;
   font-family: "Nunito", sans-serif;
+  overflow-wrap: anywhere;
+}
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 article {
@@ -39,7 +55,9 @@ article {
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
+
 article p {
   margin-top: 2em;
 }
@@ -71,6 +89,7 @@ header {
   align-items: center;
   padding: 1rem;
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .navBar ul {
@@ -97,6 +116,7 @@ header {
   font-size: 1rem;
   display: flex;
   flex-flow: row nowrap;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .search:focus-within {
@@ -126,6 +146,7 @@ header {
 
 @media (min-width: 576px) {
   .search {
+    height: 10vh;
     font-size: 1.5rem;
   }
 
@@ -137,6 +158,7 @@ header {
 @media (min-width: 800px) {
   .search {
     width: 75%;
+    height: 10vh;
     font-size: 2rem;
   }
 
@@ -149,11 +171,12 @@ header {
 h1 {
   color: whitesmoke;
   text-align: center;
-  font-size: 2, 5rem;
+  font-size: 1.9rem;
   margin: 1em;
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 #datum {
@@ -170,9 +193,11 @@ h1 {
   font-size: 2em;
   margin-top: auto;
 }
+
 #adress {
   float: left;
 }
+
 #strecke-popup {
   float: right;
   position: relative;
@@ -206,11 +231,11 @@ h1 {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
 #zeigen-button {
-  float: right;
-  position: relative;
-  bottom: -5px;
-  right: 26px;
+  justify-content: flex-end;
+  display: flex;
+
   padding: 6px 14px;
   border-radius: 6px;
   border: none;
@@ -224,10 +249,33 @@ h1 {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-#none {
-  width: 0px;
-  height: 0px;
-  opacity: 0;
+
+#copy-button {
+  position: relative;
+  bottom: -5px;
+  left: 50px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  background-color: #201e1f;
+  background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25),
+    inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#strecke-popup:hover,
+#maps-link:hover,
+#zeigen-button:hover,
+#copy-button:hover {
+  background-color: black;
+  transform: scale(1.1);
+  transition: 200ms transform ease-in;
+  cursor: pointer;
 }
 
 /* Adding style to the calendar */
@@ -241,24 +289,34 @@ h1 {
   margin: 10px;
   border-radius: 10px;
   height: fit-content;
+  min-height: 9rem;
   width: 10rem;
   overflow-wrap: break-word;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .datumStyle {
   background-color: whitesmoke;
-  width: 5.5rem;
+  width: fit-content;
   color: black;
   height: auto;
   padding-top: 5px;
   padding-bottom: 5px;
   margin: 0px;
-  margin-left: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
 .allCalendarCards {
   display: flex;
   padding: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.month-year {
+  display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -274,16 +332,17 @@ h1 {
 }
 
 .textmonths {
-  margin-left: 1.75rem;
   padding: 0.4em;
   width: fit-content;
   margin-top: 1rem;
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  height: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
+
 .textyear {
-  margin-left: 1.75rem;
   padding: 0.4em;
   width: fit-content;
   margin-top: 1rem;
@@ -291,15 +350,24 @@ h1 {
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
+
 .date-above-calender {
+  margin: 1rem 1rem;
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
-  margin: 0.5em;
-  margin-left: 1.75rem;
   padding: 0.3em;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 90%;
+  margin-left: 2rem;
+  text-align: -moz-center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+hr {
+  color: whitesmoke;
 }
 /* impressum */
 
@@ -311,7 +379,9 @@ h1 {
   background-color: #668586;
   color: whitesmoke;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
+
 #lizenz {
   border-radius: 0px;
   display: inline-block;
@@ -329,9 +399,11 @@ h1 {
   padding-right: 1em;
   background-color: #668586;
 }
+
 .block-text a {
   color: black;
 }
+
 .envelope {
   color: #000;
 }
@@ -347,4 +419,10 @@ h1 {
     padding-left: 10rem;
     padding-right: 10em;
   }
+}
+.loader {
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin: auto auto;
 }

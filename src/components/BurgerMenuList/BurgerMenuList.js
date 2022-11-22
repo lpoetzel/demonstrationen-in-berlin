@@ -7,17 +7,17 @@ export default function BurgerMenuList({ close }) {
     <div className="menu">
       <ul>
         <li>
-          <NavLink onClick={close} activeClassName="current" to="/">
+          <NavLink onClick={close} activeclassName="current" to="/">
             START
           </NavLink>
         </li>
         <li>
-          <NavLink onClick={close} activeClassName="current" to="calendar">
+          <NavLink onClick={close} activeclassName="current" to="calendar">
             KALENDER
           </NavLink>
         </li>
         <li>
-          <NavLink onClick={close} activeClassName="current" to="impressum">
+          <NavLink onClick={close} activeclassName="current" to="impressum">
             IMPRESSUM
           </NavLink>
         </li>

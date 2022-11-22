@@ -17,11 +17,19 @@ const Impressum = () => {
             src="https://daten.berlin.de/sites/default/files/cc-by-nc-80x15.png"
             alt="lizenz-bild"
           />{" "}
-          <a href="https://creativecommons.org/licenses/by-nc/3.0/de/">
+          <a
+            target="_blank"
+            href="https://creativecommons.org/licenses/by-nc/3.0/de/"
+            rel="noreferrer"
+          >
             Lizenz
           </a>
           . Dabei wurde der Datensatz,{" "}
-          <a href="https://daten.berlin.de/datensaetze/versammlungen-im-land-berlin">
+          <a
+            target="_blank"
+            href="https://daten.berlin.de/datensaetze/versammlungen-im-land-berlin"
+            rel="noreferrer"
+          >
             Versammlungen im Land Berlin
           </a>
           {""}, der Stadt Berlin genutzt und unverändert wieder gegeben.{" "}
@@ -30,10 +38,8 @@ const Impressum = () => {
       <div className="impressum-block">
         <h3 className="impressum-header">Die Macher</h3>
         <span className="block-text">
-          Im Rahmen des Trainings zum Full-Stack Developer in der{" "}
-          <a href="https://www.wildcodeschool.com/">Wild Code School</a>{" "}
-          entstand dieses Project als erstes unter Nutzung von React. Die
-          Schöpfer sind: <br />
+          Im Rahmen des Trainings zum Full-Stack Developer entstand dieses
+          Project als erstes unter Nutzung von React. Die Schöpfer sind: <br />
           <div className="names">
             <div>
               Lars Poetzel{" "}
