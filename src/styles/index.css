@@ -420,3 +420,9 @@ hr {
     padding-right: 10em;
   }
 }
+.loader {
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin: auto auto;
+}
