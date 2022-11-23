@@ -4,6 +4,41 @@ The Goal of this project was to give a neutral/unbiased App to search for Demons
 
 This was our second Projects during our Training to become a Full-Stack Developer which main focus was to excerice the implementation of API's in react.
 
+## Technical
+
+### Make it run
+
+<code>git clone https://github.com/lpoetzel/demonstrationen-in-berlin.git</code>
+
+<code>npm install</code>
+
+<code>npm start</code>
+
+### Dependencies 
+```
+"dependencies": {
+    "-": "^0.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.1.3",
+    "react": "^18.2.0",
+    "react-burger-menu": "^3.0.8",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "react-router-dom": "^6.4.2",
+    "react-scripts": "^5.0.1",
+    "react-spinners": "^0.13.6",
+    "reactjs-popup": "^2.0.5",
+    "styled-components": "^5.3.6",
+    "web-vitals": "^2.1.4"
+  },
+  ```
+
 ## Introduction
 
 During our search for an API to use for our Project i come across the fact that since 2021 the gouvernment of berlin has to publish data that are "public interest" in their [open data initivate](https://daten.berlin.de/)
