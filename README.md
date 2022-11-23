@@ -14,6 +14,14 @@ This was our second Projects during our Training to become a Full-Stack Develope
 
 <code>npm start</code>
 
+### Used languages
+
+-HTML
+
+-CSS
+
+-React
+
 ### Dependencies 
 ```
 "dependencies": {
