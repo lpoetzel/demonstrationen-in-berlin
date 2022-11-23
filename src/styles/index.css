@@ -23,8 +23,7 @@ body {
   overflow-wrap: break-word;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: 100vw auto;
   margin: 0;
 }
 
