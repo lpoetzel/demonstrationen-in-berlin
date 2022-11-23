@@ -19,30 +19,32 @@ function isValidDate(value) {
 
 const Searchbar = ({ posts, setSearchResults }) => {
   const handleSubmit = (e) => e.preventDefault();
-  const handleSearchChange = (e) => {
-    if (!e.target.value) {
-      return setSearchResults(
-        posts.filter((post) => post.datum.includes(formattedToday))
-      );
-    }
-    if (
-      !isNaN(e.target.value) ||
-      isValidDate(e.target.value.replaceAll(".", " "))
-    ) {
-      const resultsArray = posts.filter(
-        (post) =>
-          post.datum.includes(e.target.value) ||
-          post.plz.includes(e.target.value)
-      );
-      setSearchResults(resultsArray);
-    } else {
-      const resultsArray = posts.filter(
-        (post) =>
-          post.thema.toLowerCase().includes(e.target.value.toLowerCase()) ||
-          post.strasse_nr.toLowerCase().includes(e.target.value.toLowerCase())
-      );
-      setSearchResults(resultsArray);
-    }
+  const handleSearchChange = async (e) => {
+    setTimeout(() => {
+      if (!e.target.value) {
+        return setSearchResults(
+          posts.filter((post) => post.datum.includes(formattedToday))
+        );
+      }
+      if (
+        !isNaN(e.target.value) ||
+        isValidDate(e.target.value.replaceAll(".", " "))
+      ) {
+        const resultsArray = posts.filter(
+          (post) =>
+            post.datum.includes(e.target.value) ||
+            post.plz.includes(e.target.value)
+        );
+        setSearchResults(resultsArray);
+      } else {
+        const resultsArray = posts.filter(
+          (post) =>
+            post.thema.toLowerCase().includes(e.target.value.toLowerCase()) ||
+            post.strasse_nr.toLowerCase().includes(e.target.value.toLowerCase())
+        );
+        setSearchResults(resultsArray);
+      }
+    }, 400);
   };
 
   return (
