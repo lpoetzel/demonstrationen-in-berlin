@@ -23,8 +23,10 @@ body {
   overflow-wrap: break-word;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100vw auto;
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0;
+  padding: 0;
 }
 
 .wrapper {
